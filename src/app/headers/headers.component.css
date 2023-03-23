@@ -1,0 +1,40 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background: var(--opositcolor);
+}
+
+.logo {
+    font-size: 1.2rem;
+    color: var(--fontcolor);
+    font-weight: 600;
+    cursor: default;
+    text-decoration-color: transparent;
+}
+
+.navbar a {
+    color: var(--fontcolor);
+    font-size: 1.2rem;
+    margin-left: 4rem;
+    text-decoration-color: transparent;
+    transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.active{
+    color: var(--primarycolor);
+    font-weight: 500;
+    
+}
+#menu-icon{
+    font-size: 2.5rem;
+    color: var(--fontcolor);
+    display: none;
+}

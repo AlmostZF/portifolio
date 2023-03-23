@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+:root{
+    --bgcolor: #292526;
+    --opositecolor: #E0EAF3;
+    --primarycolor: #73E0B8;
+    --secondcolor: #10885C;
+    --defaultwhite: #fff;
+    --fontcolor: #000;
+}
+
+html{
+    font-weight: 60.5%;
+    overflow-x: hidden;
+}
+
+body{
+    background-color: var(--opositecolor);
+    color: var(--primarycolor);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}

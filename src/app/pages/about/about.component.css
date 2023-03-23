@@ -1,0 +1,42 @@
+section {
+    min-height: 100vh;
+    padding: 1rem 11% 3rem 8%;
+    color: var(--bgcolor);
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-context h3 {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.about-img img {
+    width: 20vw;
+    box-shadow: 22px 23px 24px 3px #6BDFB4;
+}
+
+.about-context p {
+    padding-top: 2rem;
+    font-size: 1rem;
+}
+
+.social-midia a {
+    /* color: var(--fontcolor); */
+    display: grid;
+    width: 6rem;
+    height: 2.5rem;
+    font-size: 2rem;
+    text-decoration-color: transparent;
+
+}
+
+.social-midia {
+    padding-right: 2rem;
+    padding-bottom: 6rem;
+}
