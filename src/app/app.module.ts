@@ -7,6 +7,9 @@ import { AboutComponent } from './pages/about/about.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { HeadersComponent } from './headers/headers.component';
+import { HomeComponent } from './pages/home/home.component';// Import the missing component
+import { SwitchBackgoundComponent } from './components/switch-backgound/switch-backgound.component';
+import { ChangeLanguageComponent } from './components/change-language/change-language.component';
 
 @NgModule({
   declarations: [
@@ -14,11 +17,14 @@ import { HeadersComponent } from './headers/headers.component';
     AboutComponent,
     ProjectsComponent,
     ContactComponent,
-    HeadersComponent
+    HeadersComponent,
+    HomeComponent,
+    SwitchBackgoundComponent,
+    ChangeLanguageComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,12 +1,12 @@
-import { Component } from '@angular/core';
 import { LanguageService } from 'src/app/utils/languageService';
+import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-about',
-  templateUrl: './about.component.html',
-  styleUrls: ['./about.component.css']
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css'],
 })
-export class AboutComponent {
+export class HomeComponent {
   dictionary: any;
   constructor(public languageService: LanguageService) {}
 

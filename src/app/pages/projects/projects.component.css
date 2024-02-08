@@ -1,0 +1,21 @@
+section {
+  min-height: 100vh;
+  padding: 1rem 11% 3rem 8%;
+  color: var(--bgcolor);
+}
+
+.card{
+  width: 30%;
+  height: 15rem;
+  transform: scale(1);
+  transition: all 0.5s ease-in-out 0s;
+}
+.card:hover{
+  /* transition: all 0.5s ease-in-out 0s; */
+  transform: scale(1.07);
+  box-shadow: 1px 1px 15px 2px #72e0b8;
+  backdrop-filter: blur(7px);
+  animation: both;
+  /* background: red; */
+  /* height: 15rem; */
+}

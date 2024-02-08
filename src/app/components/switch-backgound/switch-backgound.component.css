@@ -1,0 +1,39 @@
+input {
+  -webkit-appearance: none;
+  appearance: none;
+  position: relative;
+  width: 50px;
+  height: 30px;
+  border-radius: 25px;
+  background-color: var(--bgcolor);
+  transition: background .3s;
+  outline: none;
+  cursor: pointer;
+  box-shadow: 1px 1px 5px 0px #3d3839;
+}
+
+input::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  height: 1.25rem;
+  width: 1.25rem;
+  background-color: transparent;
+  transition: left .5s, transform .5s;
+  background-image: url('../../assets/sol.svg');
+  background-size: cover;
+  /* fill: #ccb270); */
+}
+
+input:checked {
+  background-color: var(--opositecolor);
+}
+
+input:checked::after {
+  transform: translate(-50%, -50%) rotate(360deg);
+  background-image: url('../../assets/lua.svg');
+  left: 70%;
+}

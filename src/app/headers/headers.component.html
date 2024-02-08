@@ -1,14 +1,38 @@
 <header class="header">
-  <a href="#" class="logo">Guilherme</a>
-  
+  <a routerLink="#" class="logo">Guilherme</a>
+
   <i class="fa-solid fa-bars" id="menu-icon"></i>
 
   <nav class="navbar">
-    <a href="#home" class="active">Home</a>
-    <a href="#about">About</a>
-    <a href="#project">Project</a>
-    <a href="#cv">Cv </a>
-    <a href="#contract">Contract</a>
+    <ul>
+      <li><a href="#home" class="active" (click)="changeColor($event)">{{dictionary.home}}</a></li>
+      <li><a href="#about"  (click)="changeColor($event)">{{dictionary.about}}</a></li>
+      <li><a href="#project"  (click)="changeColor($event)">{{dictionary.project}}</a></li>
+      <li><a href="#cv"  (click)="changeColor($event)">{{dictionary.cv}}</a></li>
+      <li><a href="#contact"  (click)="changeColor($event)">{{dictionary.contact}}</a></li>
+    </ul>
   </nav>
+  <app-change-language></app-change-language>
+  <app-switch-backgound></app-switch-backgound>
 
 </header>
+
+<section id="home">
+  <app-home></app-home>
+</section>
+
+<section id="about">
+  <app-about></app-about>
+</section>
+
+<section id="project">
+  <app-projects></app-projects>
+</section>
+<!--
+<section id="cv">
+  <app-projects></app-projects>
+</section>
+
+<section id="contract">
+  <app-contact></app-contact>
+</section> -->
