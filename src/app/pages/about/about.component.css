@@ -5,8 +5,6 @@ section {
 
 .about {
    display: flex;
-  /* justify-content: center;
-  align-items: center;  */
   background: var(--bgcolor);
 }
 .about-img {
@@ -14,9 +12,6 @@ section {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  /* background: red; */
-  /* min-height: 20rem;  */
-  /* Defina uma altura mínima */
 }
 
 .about-context {
@@ -25,7 +20,7 @@ section {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  min-height: 100%; /* Defina uma altura mínima */
+  min-height: 100%;
   color: var(--defaultwhite);
 }
 /*
@@ -44,4 +39,26 @@ section {
 
 #style-icon {
   color: var(--abouticoncolor);
+}
+
+@media only screen and (max-width: 720px) {
+  section {
+    width: 100%;
+    justify-content: center;
+    min-height: 60vh;
+    flex-direction: column;
+  }
+  .about {
+    flex-direction: column;
+  }
+  .about-img {
+    flex-direction: column;
+  }
+  .about-context {
+    flex-direction: column;
+  }
+  .about-options ul {
+    width: 100%;
+    justify-content: space-around;
+  }
 }

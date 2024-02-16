@@ -13,6 +13,7 @@ export class Dictionary{
       subtitle: 'front-end developer',
       cv: 'Curriculum Vitae',
       project: 'Projects',
+      moreBtn: 'See more',
     },
     pt:{
       home: 'Início',
@@ -29,6 +30,7 @@ export class Dictionary{
       subtitle: 'Desenvolvimento front-end',
       cv: 'Curriculum Vitae',
       project: 'Projetos',
+      moreBtn: 'Ver mais',
     },
   }
 }

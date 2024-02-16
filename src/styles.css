@@ -38,3 +38,7 @@ html{
     outline: none;
     scroll-behavior: smooth;
 }
+body{
+  width: 100vw;
+  height: 100vh;
+}
