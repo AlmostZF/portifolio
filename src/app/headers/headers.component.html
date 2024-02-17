@@ -3,7 +3,7 @@
 
   <i class="fa-solid fa-bars" id="menu-icon"></i>
 
-  <nav class="navbar">
+  <nav class="navbar-desktop">
     <ul>
       <li><a href="#home" class="active" (click)="changeColor($event)">{{dictionary.home}}</a></li>
       <li><a href="#about"  (click)="changeColor($event)">{{dictionary.about}}</a></li>
@@ -11,9 +11,29 @@
       <li><a href="#cv"  (click)="changeColor($event)">{{dictionary.cv}}</a></li>
       <li><a href="#contact"  (click)="changeColor($event)">{{dictionary.contact}}</a></li>
     </ul>
+    <app-change-language></app-change-language>
+    <app-switch-backgound></app-switch-backgound>
   </nav>
-  <app-change-language></app-change-language>
-  <app-switch-backgound></app-switch-backgound>
+
+  <div class="btn-open" id="btn-menu" (click)="openMenu()">
+    <i class="fa-solid fa-bars"></i>
+  </div>
+
+  <nav class="navbar-mobile" id="menu">
+    <div class="btn-close" (click)="closeMenu()">
+    </div>
+    <app-switch-backgound></app-switch-backgound>
+    <ul>
+      <li><a href="#home"  (click)="changeColor($event)">{{dictionary.home}}</a></li>
+      <li><a href="#about"  (click)="changeColor($event)">{{dictionary.about}}</a></li>
+      <li><a href="#project"  (click)="changeColor($event)">{{dictionary.project}}</a></li>
+      <li><a href="#cv"  (click)="changeColor($event)">{{dictionary.cv}}</a></li>
+      <li><a href="#contact"  (click)="changeColor($event)">{{dictionary.contact}}</a></li>
+    </ul>
+    <!-- <app-change-language></app-change-language> -->
+  </nav>
+  <div class="overlay-menu"></div>
+
 
 </header>
 

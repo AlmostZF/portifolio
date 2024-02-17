@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { LanguageService } from '../utils/languageService';
 
 @Component({
@@ -9,6 +9,7 @@ import { LanguageService } from '../utils/languageService';
 export class HeadersComponent {
   dictionary: any;
   previousItem: any;
+  // btnMenu: boolean = false;
 
   constructor(public languageService: LanguageService) {}
 
@@ -16,6 +17,25 @@ export class HeadersComponent {
     this.languageService.dictionary.subscribe((dictionary) => {
       this.dictionary = dictionary;
     });
+
+  }
+  // @HostListener('document:click', ['$event'])
+  // clickBtnMeny(event: any) {
+  //   const btnMenu = document.getElementById('.btn-menu') as HTMLElement;
+  //   const menu = document.getElementById('.menu') as HTMLElement;
+
+  //   if (event.target === btnMenu) {
+  //     menu.classList.add('open-menu');
+  //   }
+  // }
+  openMenu() {
+    const menu = document.getElementById('menu') as HTMLElement;
+    menu.classList.add('open-menu')
+    console.log(menu.classList)
+  }
+  closeMenu(){
+    const openMenu = document.getElementById('menu') as HTMLElement;
+    openMenu.classList.remove('open-menu');
   }
 
   changeColor(event: any) {
