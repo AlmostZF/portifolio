@@ -39,8 +39,17 @@ export class ChangeLanguageComponent {
     });
   }
 
-  selectLanguage(changelanguage: string) {
+  selectLanguage() {
+    let changelanguage = '';
+    if(this.selectedLanguage !== 'en'){
+      changelanguage = 'en'
+      this.languageService.changeLanguage(changelanguage);
+      this.selectedLanguage = changelanguage;
+      return;
+    }
+    changelanguage = 'pt-BR'
     this.languageService.changeLanguage(changelanguage);
     this.selectedLanguage = changelanguage;
+    return
   }
 }

@@ -9,8 +9,8 @@ export class LanguageService {
   private _dictionary = new BehaviorSubject<any>(Dictionary.Lenguage.en);
   dictionary = this._dictionary.asObservable();
 
-  changeLanguage(languague: string) {
+  changeLanguage(languague: string) :void{
     this._dictionary.next(
-      languague==='pt-BR' ? Dictionary.Lenguage.pt : Dictionary.Lenguage.en);
+      languague ==='pt-BR' ? Dictionary.Lenguage.pt : Dictionary.Lenguage.en);
   }
 }

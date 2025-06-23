@@ -1,18 +1,87 @@
-<header class="header">
+<div class="bg">
+  <div class="bubbles">
+      <span style="--i:11"></span>
+      <span style="--i:12"></span>
+      <span style="--i:24"></span>
+      <span style="--i:10"></span>
+      <span style="--i:14"></span>
+      <span style="--i:23"></span>
+      <span style="--i:18"></span>
+      <span style="--i:16"></span>
+      <span style="--i:19"></span>
+      <span style="--i:20"></span>
+      <span style="--i:22"></span>
+      <span style="--i:25"></span>
+      <span style="--i:18"></span>
+      <span style="--i:21"></span>
+      <span style="--i:13"></span>
+      <span style="--i:15"></span>
+      <span style="--i:26"></span>
+      <span style="--i:17"></span>
+      <span style="--i:13"></span>
+      <span style="--i:28"></span>
+      <span style="--i:11"></span>
+      <span style="--i:12"></span>
+      <span style="--i:24"></span>
+      <span style="--i:10"></span>
+      <span style="--i:14"></span>
+      <span style="--i:23"></span>
+      <span style="--i:18"></span>
+      <span style="--i:16"></span>
+      <span style="--i:19"></span>
+      <span style="--i:20"></span>
+      <span style="--i:22"></span>
+      <span style="--i:25"></span>
+      <span style="--i:18"></span>
+      <span style="--i:21"></span>
+      <span style="--i:13"></span>
+      <span style="--i:15"></span>
+      <span style="--i:26"></span>
+      <span style="--i:17"></span>
+      <span style="--i:13"></span>
+      <span style="--i:28"></span>
+      <span style="--i:11"></span>
+      <span style="--i:12"></span>
+      <span style="--i:24"></span>
+      <span style="--i:10"></span>
+      <span style="--i:14"></span>
+      <span style="--i:23"></span>
+      <span style="--i:18"></span>
+      <span style="--i:16"></span>
+      <span style="--i:19"></span>
+      <span style="--i:20"></span>
+      <span style="--i:22"></span>
+      <span style="--i:25"></span>
+      <span style="--i:18"></span>
+      <span style="--i:21"></span>
+      <span style="--i:13"></span>
+      <span style="--i:15"></span>
+      <span style="--i:26"></span>
+      <span style="--i:17"></span>
+      <span style="--i:13"></span>
+      <span style="--i:28"></span>
+
+      
+  </div>
+
+</div>
+<div class="header">
   <a routerLink="#" class="logo">Guilherme</a>
+
+
+  <app-change-language></app-change-language>
 
   <i class="fa-solid fa-bars" id="menu-icon"></i>
 
   <nav class="navbar-desktop">
-    <ul>
+    <ul class="mb-0">
+      <app-switch-backgound></app-switch-backgound>
       <li><a href="#home" class="active" (click)="changeColor($event)">{{dictionary.home}}</a></li>
       <li><a href="#about"  (click)="changeColor($event)">{{dictionary.about}}</a></li>
       <li><a href="#project"  (click)="changeColor($event)">{{dictionary.project}}</a></li>
-      <li><a href="#cv"  (click)="changeColor($event)">{{dictionary.cv}}</a></li>
       <li><a href="#contact"  (click)="changeColor($event)">{{dictionary.contact}}</a></li>
     </ul>
-    <app-change-language></app-change-language>
-    <app-switch-backgound></app-switch-backgound>
+
   </nav>
 
   <div class="btn-open" id="btn-menu" (click)="openMenu()">
@@ -23,19 +92,17 @@
     <div class="btn-close" (click)="closeMenu()">
     </div>
     <app-switch-backgound></app-switch-backgound>
-    <ul>
+    <ul class="mb-0">
       <li><a href="#home"  (click)="changeColor($event)">{{dictionary.home}}</a></li>
       <li><a href="#about"  (click)="changeColor($event)">{{dictionary.about}}</a></li>
       <li><a href="#project"  (click)="changeColor($event)">{{dictionary.project}}</a></li>
-      <li><a href="#cv"  (click)="changeColor($event)">{{dictionary.cv}}</a></li>
       <li><a href="#contact"  (click)="changeColor($event)">{{dictionary.contact}}</a></li>
     </ul>
     <!-- <app-change-language></app-change-language> -->
   </nav>
   <div class="overlay-menu"></div>
 
-
-</header>
+</div>
 
 <section id="home">
   <app-home></app-home>
@@ -48,6 +115,10 @@
 <section id="project">
   <app-projects></app-projects>
 </section>
+
+
+<!-- <app-snake></app-snake> -->
+
 <!--
 <section id="cv">
   <app-projects></app-projects>

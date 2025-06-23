@@ -11,7 +11,7 @@ export class HeadersComponent {
   previousItem: any;
   // btnMenu: boolean = false;
 
-  constructor(public languageService: LanguageService) {}
+  constructor(public languageService: LanguageService) { }
 
   ngOnInit() {
     this.languageService.dictionary.subscribe((dictionary) => {
@@ -19,38 +19,61 @@ export class HeadersComponent {
     });
 
   }
-  // @HostListener('document:click', ['$event'])
-  // clickBtnMeny(event: any) {
-  //   const btnMenu = document.getElementById('.btn-menu') as HTMLElement;
-  //   const menu = document.getElementById('.menu') as HTMLElement;
 
-  //   if (event.target === btnMenu) {
-  //     menu.classList.add('open-menu');
-  //   }
-  // }
   openMenu() {
+
     const menu = document.getElementById('menu') as HTMLElement;
     menu.classList.add('open-menu')
-    console.log(menu.classList)
   }
-  closeMenu(){
+
+  closeMenu() {
+
     const openMenu = document.getElementById('menu') as HTMLElement;
     openMenu.classList.remove('open-menu');
   }
 
   changeColor(event: any) {
-    if (this.previousItem) {
-      this.previousItem.style.color = '';
-      this.previousItem.style.fontWeight = '';
-    }
-    const anchorElement = document.querySelector('.active') as HTMLElement;
-    if (anchorElement) {
-      anchorElement.style.color = 'var(--fontcolor)';
-    }
+
     const target = event.target;
-    target.style.color = 'var(--secondcolor)';
-    target.style.fontWeight = '480';
-    this.previousItem = target;
+    target.classList.add('active');
+
+    const header = document.querySelector('.header') as HTMLElement;
+
+    const headerStyle = window.getComputedStyle(header);
+
+    const navbarDesktopLinks = document.querySelectorAll('.navbar-desktop a');
+    const navbarMobileLinks = document.querySelectorAll('.navbar-mobile a');
+
+
+    if (headerStyle.color == "rgb(115, 224, 184)") {
+
+      navbarDesktopLinks.forEach((link: any) => {
+        link.style.color = "black"
+        link.classList.remove('active');
+      });
+      
+      navbarMobileLinks.forEach((link: any) => {
+        link.style.color = "black"
+        link.classList.remove('active');
+      });
+
+      target.classList.add('active');
+      return;
+    }
+
+
+    navbarDesktopLinks.forEach((link: any) => {
+      link.style.color = "black"
+      link.classList.remove('active');
+    });
+
+    navbarMobileLinks.forEach((link: any) => {
+      link.style.color = "black"
+      link.classList.remove('active');
+    });
+
+    target.classList.add('active');
+
   }
 
   ngAfterViewInit() {
@@ -62,7 +85,7 @@ export class HeadersComponent {
 
     let observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        const id = entry.target.getAttribute('id') ;
+        const id = entry.target.getAttribute('id');
         if (entry.isIntersecting) {
           document.querySelector(`.navbar a[href="#${id}"]`)?.classList.add('active');
         } else {

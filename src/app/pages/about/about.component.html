@@ -1,6 +1,7 @@
-<section class="about" id="about-context">
-  <div class="about-img">
-    <img src="https://i0.wp.com/reviveyouthandfamily.org/wp-content/uploads/2016/11/house-placeholder.jpg?ssl=1" alt="" width="30%">
+<section class="about" id="about-context" [@fade]>
+  <!-- <div class="about-img"> -->
+    <!-- <img src="https://i0.wp.com/reviveyouthandfamily.org/wp-content/uploads/2016/11/house-placeholder.jpg?ssl=1" alt="" width="30%"> -->
+
     <div class="about-context">
       <h2>{{dictionary.aboutMe}}</h2>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
@@ -13,10 +14,49 @@
             <p><i class="fa-regular fa-circle-check" id="style-icon"></i> X projetos</p>
           </li>
           <li>
-            <p><i class="fa-regular fa-circle-check" id="style-icon"></i> Desenvolvedor front-end</p>
+            <p><i class="fa-regular fa-circle-check" id="style-icon" ></i> Desenvolvedor front-end</p>
+          </li>
+          <li>
+            <p><i class="fa-regular fa-circle-check" id="style-icon" (click)="enableTerminal()" ></i>Terminal</p>
           </li>
         </ul>
+      </div>  
+
+    </div>
+
+    <div class="cards-section">  
+      <div *ngFor="let item of listStack; let i = index" style="width: 24%; height: 20%;">
+        <div class="card">
+          <img class="img" [alt]="item.alt" [height]="item.height" [width]="item.width" [src]="item.src" />
+          <div class="textBox">
+            <p class="text head">{{item.alt}}</p>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
+  <!-- </div> -->
+   <div *ngIf="isTerminalOpen" class="terminal"  [@fade] [ngStyle]="{ 'background-color': backgroundTerminal }">
+      <div class="container-custom">
+        <div class="terminal_toolbar">
+          <div class="butt">
+            <button class="btn btn-color"></button>
+            <button class="btn"></button>
+            <button class="btn"></button>
+          </div>
+          <p class="user m-0">{{'guest_user@user'}}</p>
+          <div class="add_tab">
+            +
+          </div>
+        </div>
+        <div class="terminal_body">
+          <div class="terminal_promt">
+            <span class="terminal_user">{{'guest_user@user'}}:</span>
+            <span class="terminal_location">~</span>
+            <span class="terminal_bling pr-1">$</span>
+            <input [(ngModel)]="command" id="myTextarea" placeholder="{{dictionary.textTerminal}}" (keydown)="inputTerminal($event)">
+          </div>
+        </div>
+      </div>
+    </div>
 </section>
+

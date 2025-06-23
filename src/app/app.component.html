@@ -1,3 +1,11 @@
-<app-headers></app-headers>
+<div *ngIf="!game">
+    <app-headers></app-headers>
+
+</div>
+<div *ngIf="game">
+    <app-snake></app-snake>
+</div>
+<!-- <app-headers></app-headers>
+<app-snake></app-snake> -->
 <!-- <app-projects></app-projects>
 <app-contact></app-contact> -->

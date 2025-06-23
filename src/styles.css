@@ -1,9 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 :root{
     --bgcolor: #292526;
+    --bgDarkercolor: #111010;
     --opositecolor: #E0EAF3;
     --primarycolor: #73E0B8;
     --secondcolor: #10885C;
+    --secondDarkercolor: #0b5e3f;
     --defaultwhite: #fff;
     --fontcolor: #000;
     --abouticoncolor: #b55841;
@@ -41,4 +43,6 @@ html{
 body{
   width: 100vw;
   height: 100vh;
+  user-select: none;
 }
+
